@@ -1,12 +1,7 @@
 package dio.bootcamp.java.api_rest_spring_boot.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import dio.bootcamp.java.api_rest_spring_boot.model.base.Item;
+import jakarta.persistence.Entity;
 
-@Getter
-@Setter
-public class Feature {
-    private String name;
-    private String description;
-    private String icon;
-}
+@Entity(name = "tb_feature")
+public class Feature extends Item {}
