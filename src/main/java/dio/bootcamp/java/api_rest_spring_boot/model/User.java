@@ -16,7 +16,7 @@ public class User {
     private String name;
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Card> cards;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Feature> features;
